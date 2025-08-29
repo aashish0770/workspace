@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where([date-theme=dark], [data-theme=dark] *));
+
+@layer base {
+  html {
+    @apply transition-colors duration-200 ease-in-out;
+  }
+
+  body {
+    @apply bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .h1 {
+    @apply text-3xl;
+  }
+
+  h2 {
+    @apply text-2xl;
+  }
+
+  .container {
+    @apply max-w-7xl mx-auto px-2;
+  }
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
